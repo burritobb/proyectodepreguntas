@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Degradado en morados pastel suaves */
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    text-align: center;
+    color: #4a345a; /* Un tono oscuro pero con base morada */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+    /* Morado muy oscuro y elegante */
+    background: #1a1625; 
+    color: #f3e5f5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#app {
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    /* Blanco casi puro con opacidad para dejar ver el pastel de fondo */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(142, 68, 173, 0.15);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+body.dark-mode #app {
+    /* Fondo oscuro pero con un toque ciruela */
+    background: #2d283e; 
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    /* Morado pastel vibrante */
+    background: #b39ddb;
+    border: none;
+    border-radius: 10px;
+    color: #311b92; /* Texto oscuro para contraste en el pastel */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #9575cd;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(103, 58, 183, 0.3);
+}
+
+body.dark-mode button {
+    /* Botón más oscuro para el dark mode */
+    background: #673ab7;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background: #7e57c2;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(179, 157, 219, 0.2);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    color: #5e35b1;
+}
+
+body.dark-mode li {
+    background: rgba(255, 255, 255, 0.05);
+    color: #d1c4e9;
+}

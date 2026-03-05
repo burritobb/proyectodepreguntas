@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Interactiva Avanzada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>TRIVIA INTERACTIVA</h1>
+
+        <div id="start-screen">
+            <input type="text" id="player-name" placeholder="Ingresa tu nombre">
+            <select id="category">
+                <option value="general">General</option>
+                <option value="ciencias">Ciencias</option>
+                <option value="historia">Historia</option>
+                <option value="tecnologia">Tecnología</option>
+            </select>
+            <button onclick="startGame()">Comenzar</button>
+            <button onclick="toggleTheme()">🌃 Modo Oscuro</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <p id="level"></p>
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <p id="timer"></p>
+        </div>
+
+        <div id="end-screen" class="hidden">
+            <h2>Juego terminado</h2>
+            <p id="score-text"></p>
+            <h3>🏆 Ranking</h3>
+            <ul id="ranking"></ul>
+            <button onclick="restartGame()">Jugar de nuevo</button>
+        </div>
+    </div>
+
+    <audio id="correct-sound" src="https://actions.google.com/sounds/v1/actions/beep.ogg"></audio>
+    <audio id="wrong-sound" src="https://actions.google.com/sounds/v1/actions/error.ogg"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
